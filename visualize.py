@@ -3,7 +3,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Load the CSV
-df = pd.read_csv("embedding_similarities.csv", index_col=0)
+df = pd.read_csv("embedding_similarities_newclass2.csv", index_col=0)
 
 # Convert columns to integers (time in ms)
 df.columns = df.columns.astype(int)
@@ -16,4 +16,4 @@ plt.xlabel("Time of Caption (ms)")
 plt.ylabel("Label (Definition)")
 plt.title("Cross-Similarities Between Detailed Caption and Definitions of Labels in Frame Heatmap")
 plt.tight_layout()
-plt.savefig("embedding_similarities_heatmap.png", dpi=300)
+plt.savefig("embedding_similarities_heatmap_newclass2.png", dpi=300)

@@ -1,4 +1,4 @@
-
+from torchvision import transforms
 
 def run_example(generated_images, processor, model, real_texts, bbs=None, label=None, text_input=None, debug=False, test=False):
 

@@ -15,7 +15,7 @@ def next_word_similarity(sentence1, sentence2):
 
 def main():
     # Define the labels of interest
-    target_labels = ['Individual activity', 'Student writing', 'Individual technology', 'Desks-sitting ', 'Student(s) standing or walking']
+    target_labels = ['Individual activity', 'Student writing', 'Individual technology', 'Sitting at desks', 'Student(s) standing or walking', 'Presentation with technology']
     
     # Load label definition embeddings
     label_embeddings = {}
@@ -94,11 +94,11 @@ def main():
             if frame in text_similarity_matrix[label]:
                 df_text.loc[label, frame] = text_similarity_matrix[label][frame]
 
-    df_embedding.to_csv('embedding_similarities.csv')
-    print(f"Saved embedding similarity matrix to 'embedding_similarities.csv'")
+    df_embedding.to_csv('embedding_similarities_newclass3.csv')
+    print(f"Saved embedding similarity matrix to 'embedding_similarities_newclass3.csv'")
     
-    df_text.to_csv('text_distribution_similarities.csv')
-    print(f"Saved text distribution similarity matrix to 'text_distribution_similarities.csv'")
+    df_text.to_csv('text_distribution_similarities_newclass3.csv')
+    print(f"Saved text distribution similarity matrix to 'text_distribution_similarities_newclass3.csv'")
     
     print("\nEmbedding Similarity Statistics:")
     print(f"Average similarity: {df_embedding.values.mean():.4f}")
