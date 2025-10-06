@@ -443,9 +443,7 @@ def main(args):
 
     print(f"Saved captions CSV: {caption_csv_path}")
 
-    # ---------------------------
     # 4) Similarity computations
-    # ---------------------------
 
     # eaf_definition_embeddings/*.pt
     label_embeddings_dir = "eaf_definition_embeddings"
